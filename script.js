@@ -20,12 +20,16 @@ keys.addEventListener('click', function(e){
     }
 
     if(element.classList.contains('decimal')){
-        console.log('Decimal', element.value);
+        //console.log('Decimal', element.value);
+        inputDecimal();
+        updateDisplay();
         return;
     }
 
     if(element.classList.contains('clear')){
-        console.log('Clear', element.value);
+        //console.log('Clear', element.value);
+        clear();
+        updateDisplay();
         return;
     }
 
@@ -37,4 +41,14 @@ keys.addEventListener('click', function(e){
 
 function inputNumber(num){
     displayValue = displayValue === '0'? num: displayValue + num;
+}
+
+function inputDecimal(){
+    if (!displayValue.includes('.')){
+        displayValue += '.';
+    }
+}
+
+function clear() {
+    displayValue = '0';
 }
