@@ -29,8 +29,12 @@ keys.addEventListener('click', function(e){
         return;
     }
 
-    console.log('Number', element.value);
+    //console.log('Number', element.value);
+    inputNumber(element.value); // Sayı değerlerini ilgili fonksiyona gönderir.
+    updateDisplay();
 
-    
-    
 });
+
+function inputNumber(num){
+    displayValue = displayValue === '0'? num: displayValue + num;
+}
