@@ -10,6 +10,7 @@ html {
 
 body {
     font-size: 1.2rem;
+    background-color: #af8182;
 }
 
 .calculator {
@@ -20,6 +21,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    background-color: white;
 }
 
 .calculator-input {
